@@ -13,10 +13,12 @@ body {
 }
 
 h1 {
+  margin-bottom: 0.7em;
   font-size: 1.6rem;
 }
 
 h2 {
+  margin-bottom: 0.2em;
   font-size: 1.4rem;
 }
 
@@ -25,7 +27,96 @@ h1, h2 {
 }
 
 span {
+  display: block;
   font-weight: 200;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 6%;
+}
+main {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4em;
+}
+
+.main__intro {
+  text-align: center;
+  width: min(100%, 500px);
+}
+
+.main__cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 1.5em;
+  grid-column-gap: 1.5em;
+  grid-template-areas: "card-supervisor" "card-team-builder" "card-karma" "card-calculator";
+}
+@media (min-width: 769px) {
+  .main__cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas: ". card-team-builder ." "card-supervisor card-team-builder card-calculator" "card-supervisor card-karma card-calculator" ". card-karma .";
+  }
+}
+
+.card {
+  width: max(150px, 100%);
+  background: white;
+  padding: 1.3em;
+  border-radius: 0.4em;
+  border-top: 0.25em solid;
+  box-shadow: 0 0.6em 0.5em rgba(84, 158, 242, 0.15);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+.card::after {
+  content: "";
+  align-self: flex-end;
+  margin-top: 1.5em;
+}
+
+.main__card--supervisor {
+  border-top-color: #45d3d3;
+  grid-area: card-supervisor;
+}
+.main__card--supervisor::after {
+  content: url("../images/icon-supervisor.svg");
+}
+
+.main__card--team-builder {
+  border-top-color: #ea5353;
+  grid-area: card-team-builder;
+}
+.main__card--team-builder::after {
+  content: url("../images/icon-team-builder.svg");
+}
+
+.main__card--karma {
+  border-top-color: #fcaf4a;
+  grid-area: card-karma;
+}
+.main__card--karma::after {
+  content: url("../images/icon-karma.svg");
+}
+
+.main__card--calculator {
+  border-top-color: #549ef2;
+  grid-area: card-calculator;
+}
+.main__card--calculator::after {
+  content: url("../images/icon-calculator.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

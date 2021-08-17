@@ -4,6 +4,7 @@ $clr-red: hsl(0, 78%, 62%);
 $clr-cyan: hsl(180, 62%, 55%);
 $clr-orange: hsl(34, 97%, 64%);
 $clr-blue: hsl(212, 86%, 64%);
+$clr-transparent-blue: hsla(212, 86%, 64%, 0.15);
 //## Neutral
 $clr-very-dark-blue: hsl(234, 12%, 34%);
 $clr-grayish-blue: hsl(229, 6%, 66%);
@@ -28,7 +29,7 @@ $font-stack: "Poppins", sans-serif;
 //# Breakpoints
 $breakpoints: (
   phone: 375px,
-  tabletPortrait: 750px,
+  tabletPortrait: 769px,
   tabletLandscape: 1024px,
   laptop: 1280px,
 );

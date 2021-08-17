@@ -19,12 +19,14 @@ body{
 }
 
 h1{
+    margin-bottom: .7em;
     font: {
         size: map-get($map: var.$font-sizes, $key: primary--200);
         weight: map-get($map: var.$font-weights, $key: neutral--600);
     }
 }
 h2{
+    margin-bottom: .2em;
     font: {
         size: map-get($map: var.$font-sizes, $key: primary--100);
         weight: map-get($map: var.$font-weights, $key: neutral--600);
@@ -32,6 +34,7 @@ h2{
 }
 h1, h2{color: var.$clr-very-dark-blue;}
 span{
+    display: block;
     font: {
         weight: map-get($map: var.$font-weights, $key: neutral--200);
     }

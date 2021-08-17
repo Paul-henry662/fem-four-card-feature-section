@@ -1,12 +1,14 @@
+@use  "./variables" as var;
+
 @mixin mediaQuery($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
+  @media (min-width: map-get(var.$breakpoints, $size)) {
     @content;
   }
 }
 
-@mixin displayFlex($direction, $wrap, $alignItems, $justContent) {
+@mixin displayFlex($flow, $alignItems, $justContent) {
   display: flex;
-  flex-flow: $direction $wrap;
+  flex-flow: $flow;
   align-items: $alignItems;
   justify-content: $justContent;
 }

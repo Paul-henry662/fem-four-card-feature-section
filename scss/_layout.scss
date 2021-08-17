@@ -1,0 +1,46 @@
+@use "./abstracts/mixins" as mix;
+
+body{
+    @include mix.displayFlex(column nowrap, center, center);
+    padding: 4em 6%;
+
+    @at-root main{
+        width: 100%;
+        @include mix.displayFlex(column nowrap, center, center);
+        row-gap: 4em;
+    }
+
+    @at-root .main__intro{
+        text-align: center;
+        width: min(100%, 500px);
+    }
+
+    @at-root .main__cards{
+        width: 100%;
+        display: grid;
+
+        grid: {
+            template-columns: none;
+            template-rows: repeat(4, 1fr);
+            row-gap: 1.5em;
+            column-gap: 1.5em;
+        }
+
+        grid-template-areas: 
+            "card-supervisor"
+            "card-team-builder"
+            "card-karma"
+            "card-calculator";
+
+        @include mix.mediaQuery(tabletPortrait){
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 100px);
+
+            grid-template-areas: 
+                ". card-team-builder ."
+                "card-supervisor card-team-builder card-calculator"
+                "card-supervisor card-karma card-calculator"
+                ". card-karma .";
+        }
+    }
+}

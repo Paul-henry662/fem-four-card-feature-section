@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.card{
+    width: max(150px, 100%);
+    background: white;
+    padding: 1.3em;
+    border-radius: 0.4em;
+    border-top: 0.25em solid;
+    box-shadow: 0 0.6em 0.5em var.$clr-transparent-blue;
+
+    @include mix.displayFlex(column wrap, flex-start, center);
+
+    &::after{
+        content: "";
+        align-self: flex-end;
+        margin-top: 1.5em;
+    }
+}
+
+.main__card--supervisor{
+    border-top-color: var.$clr-cyan;
+    grid-area: card-supervisor;
+
+    &::after{
+        content: url("../images/icon-supervisor.svg");
+    }
+}
+.main__card--team-builder{
+    border-top-color: var.$clr-red;
+    grid-area: card-team-builder;
+
+    &::after{
+        content: url("../images/icon-team-builder.svg");
+    }
+}
+.main__card--karma{
+    border-top-color: var.$clr-orange;
+    grid-area: card-karma;
+
+    &::after{
+        content: url("../images/icon-karma.svg");
+    }
+}
+.main__card--calculator{
+    border-top-color: var.$clr-blue;
+    grid-area: card-calculator;
+
+    &::after{
+        content: url("../images/icon-calculator.svg");
+    }
+}
