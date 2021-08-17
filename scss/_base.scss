@@ -1,0 +1,38 @@
+@use "./abstracts/variables" as var;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+
+    font: {
+        family: var.$font-stack;
+        size: map-get($map: var.$font-sizes, $key: neutral);
+        weight: map-get($map: var.$font-weights, $key: neutral--400);
+    }
+    
+    color: var.$clr-grayish-blue;
+}
+
+h1{
+    font: {
+        size: map-get($map: var.$font-sizes, $key: primary--200);
+        weight: map-get($map: var.$font-weights, $key: neutral--600);
+    }
+}
+h2{
+    font: {
+        size: map-get($map: var.$font-sizes, $key: primary--100);
+        weight: map-get($map: var.$font-weights, $key: neutral--600);
+    }
+}
+h1, h2{color: var.$clr-very-dark-blue;}
+span{
+    font: {
+        weight: map-get($map: var.$font-weights, $key: neutral--200);
+    }
+}
