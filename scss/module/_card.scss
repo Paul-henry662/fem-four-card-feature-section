@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as mix;
 
 .card{
-    width: max(150px, 100%);
+    width: fit-content;
     background: white;
     padding: 1.3em;
     border-radius: 0.4em;

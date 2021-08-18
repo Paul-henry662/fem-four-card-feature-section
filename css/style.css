@@ -9,6 +9,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  background: white;
   color: #a3a5ae;
 }
 
@@ -63,14 +64,15 @@ main {
 }
 @media (min-width: 769px) {
   .main__cards {
+    padding-inline: 6%;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas: ". card-team-builder ." "card-supervisor card-team-builder card-calculator" "card-supervisor card-karma card-calculator" ". card-karma .";
   }
 }
 
 .card {
-  width: max(150px, 100%);
+  width: fit-content;
   background: white;
   padding: 1.3em;
   border-radius: 0.4em;

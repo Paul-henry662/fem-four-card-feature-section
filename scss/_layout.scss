@@ -33,8 +33,9 @@ body{
             "card-calculator";
 
         @include mix.mediaQuery(tabletPortrait){
+            padding-inline: 6%;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 100px);
+            grid-template-rows: repeat(4, auto);
 
             grid-template-areas: 
                 ". card-team-builder ."

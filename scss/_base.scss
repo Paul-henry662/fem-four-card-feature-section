@@ -14,7 +14,7 @@ body{
         size: map-get($map: var.$font-sizes, $key: neutral);
         weight: map-get($map: var.$font-weights, $key: neutral--400);
     }
-    
+    background: white;
     color: var.$clr-grayish-blue;
 }
 
@@ -32,7 +32,11 @@ h2{
         weight: map-get($map: var.$font-weights, $key: neutral--600);
     }
 }
-h1, h2{color: var.$clr-very-dark-blue;}
+
+h1, h2{
+    color: var.$clr-very-dark-blue;
+}
+
 span{
     display: block;
     font: {
